@@ -5,9 +5,10 @@
     },
     "extends": [
         "airbnb",
-        "airbnb/hook",
+        "airbnb/hooks",
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
     ],
     "parser": "@babel/eslint-parser",
     "parserOptions": {
@@ -21,5 +22,13 @@
         "react"
     ],
     "rules": {
+        "prettier/prettier": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-no-useless-fragment": "off",
+        "react/function-component-definition": [2, {
+            "namedComponents": ["function-declaration" , "function-expression" , "arrow-function"],
+            "unnamedComponents": ["function-expression" , "arrow-function"]
+      }]
     }
 }
